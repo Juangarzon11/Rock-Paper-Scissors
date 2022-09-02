@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/styles.css">
+  
+  <title>Frontend Mentor | Rock, Paper, Scissors</title>
+
+</head>
+<body>
+  <header class="header">
+      <img class="heading-main" src="./images/logo.svg" alt="Rock, Paper, Scissors">
+    <div class="header-score">
+        <h4 class="header-title">Score</h4>
+        <span id="score" class="header__value">0</span>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <div class="rules-container" id="rules-container">
+      <div class="rules">
+        <div class="rules-header">
+          <h1>RULES</h1>
+          <div id="close-rules" class="rules-header-img">
+            <img src="./images/icon-close.svg" alt="Close">
+          </div>
+        </div>
+        <div class="rules-img">
+          <img src="./images/image-rules.svg" alt="Rules">
+        </div>
+      </div>
+    </div>
+
+    <div id="result">
+      Choose an option!
+    </div>
+
+    <div id="container-button" class="container-buttons hide">
+      
+    </div>
+
+    <div id="machine-option" class="container-buttons machine-option hide">
+      <div class="container-paper container-paper-machine animation-paper-machine hide">
+        <div class="big-circle big-circle-dark-blue">
+          <div class="big-circle big-circle-light-blue"></div>
+          <div class="tiny-circle tiny-circle-dark-white">
+              <div class="tiny-circle tiny-circle-light-white"></div>
+          </div>
+          <img id="paper" class="content-icon" src="./images/icon-paper.svg" alt="Paper">
+        </div>
+      </div>
+  
+      <div class="container-scissors container-scissors-machine animation-scissors-machine hide">
+        <div class="big-circle big-circle-dark-yellow">
+            <div class="big-circle big-circle-light-yellow"></div>
+            <div class="tiny-circle tiny-circle-dark-white">
+                <div class="tiny-circle tiny-circle-light-white"></div>
+            </div>
+            <img class="content-icon" src="./images/icon-scissors.svg" alt="Paper">
+        </div>
+      </div>
+  
+      <div class="container-rock container-rock-machine animation-rock-machine hide">
+        <div class="big-circle big-circle-dark-red">
+            <div class="big-circle big-circle-light-red"></div>
+            <div class="tiny-circle tiny-circle-dark-white">
+                <div class="tiny-circle tiny-circle-light-white"></div>
+            </div>
+            <img class="content-icon" src="./images/icon-rock.svg" alt="Paper">
+        </div>
+      </div>
+    </div>
+
+    <button id="play-again-button" onClick="playAgain()" class="hide">Play Again!</button>
+
+    <div id="container-buttons" class="container-buttons">
+      <img class="bg-triangle" src="./images/bg-triangle.svg" alt="BG Triangle">
+      <div class="container-paper">
+        <div class="big-circle big-circle-dark-blue">
+          <div class="big-circle big-circle-light-blue"></div>
+          <div class="tiny-circle tiny-circle-dark-white">
+              <div class="tiny-circle tiny-circle-light-white"></div>
+          </div>
+          <img id="paper" class="content-icon" src="./images/icon-paper.svg" alt="Paper">
+        </div>
+      </div>
+  
+  
+      <div class="container-scissors">
+        <div class="big-circle big-circle-dark-yellow">
+            <div class="big-circle big-circle-light-yellow"></div>
+            <div class="tiny-circle tiny-circle-dark-white">
+                <div class="tiny-circle tiny-circle-light-white"></div>
+            </div>
+            <img class="content-icon" src="./images/icon-scissors.svg" alt="Paper">
+        </div>
+      </div>
+  
+      <div class="container-rock">
+        <div class="big-circle big-circle-dark-red">
+            <div class="big-circle big-circle-light-red"></div>
+            <div class="tiny-circle tiny-circle-dark-white">
+                <div class="tiny-circle tiny-circle-light-white"></div>
+            </div>
+            <img class="content-icon" src="./images/icon-rock.svg" alt="Paper">
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  
+  <a href="#" id="open-rules" class="rules-btn">Rules</a>
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Juan Pablo Garzón</a>.
+  </div>
+  
+  <script src="./js/app.js"></script>
+  
+</body>
+</html>

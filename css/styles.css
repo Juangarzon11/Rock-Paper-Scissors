@@ -1,0 +1,359 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    
+}
+
+body {
+    background: radial-gradient(#1F3656, #131538);
+    max-height: 100vh;
+}
+
+.container {
+    padding: 13rem auto 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+.attribution {
+    margin-top: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #ddd;
+    letter-spacing: 1px;
+}
+
+.attribution > a {
+    text-decoration: none;
+    color: #ddd;
+}
+
+.header {
+    border: 1px solid #FFF;
+    border-radius: 5%;
+    padding: 1.5rem;
+    width: 50rem;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-score {
+    padding: 1rem 2rem;
+    background-color: #ddd;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.header-title {
+    text-transform: uppercase;
+    color: #2f45a3;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.header__value {
+    color: hsl(229, 25%, 31%);
+    font-size: 4rem;
+    font-weight: 700;
+    line-height: 1;
+    transition: all 0.3s ease-in-out;
+}
+
+#result {
+    margin-bottom: 8rem;
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 1rem;
+    color: white;
+}
+
+.container-buttons{
+    margin-top: 5rem;
+    width: 30rem;
+    min-height: 26.25rem;
+    margin: auto;
+    position: relative;
+    display: flex;
+}
+
+.bg-triangle{
+    position: absolute;
+    left: 50%;
+    top: 0;
+    transform: translateX(-50%);
+    width: 75%;
+    transition: all 0.5s ease-in-out;
+}
+
+.container-paper{
+    position: absolute;
+    left: 0;
+    top: -6.5rem;
+}
+
+.container-scissors{
+    position: absolute;
+    right: 0;
+    top: -6.5rem;
+}
+
+.container-rock{
+    position: absolute;
+    left: 50%;
+    bottom: 6rem;
+    transform: translateX(-50%);
+}
+
+.container-paper,
+.container-scissors,
+.container-rock {
+    transition: all 0.5s ease-in-out;
+}
+
+.big-circle {
+    width: 13rem;
+    height: 13rem;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 3px 3px rgb(0 0 0 / 25%);
+}
+
+.big-circle-dark-blue {
+    background-color: #2642bf;
+}
+
+.big-circle-dark-yellow {
+    background-color: #c76b18;
+}
+
+.big-circle-dark-red {
+    background-color: #9d1736;
+}
+
+.big-circle-light-blue,
+.big-circle-light-yellow,
+.big-circle-light-red {
+    transform: translateY(-6px) scale(1.03);
+}
+
+.big-circle-light-blue  {
+    background-image: linear-gradient(120deg, #4764F4, #5670F5);
+}
+
+.big-circle-light-yellow {
+    background-image: linear-gradient(120deg, #EC9E0D, #EBA822);
+}
+
+.big-circle-light-red {
+    background-image: linear-gradient(120deg, #DB2D4D, #DD405D);
+}
+
+.tiny-circle {
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.tiny-circle-dark-white {
+    background-color: #bfbfbf;
+    overflow: hidden;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+.tiny-circle-light-white {
+    background-color: #ddd;
+    transform: translateY(4px) scale(1.02);
+}
+
+.content-icon {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.big-circle:hover {
+    cursor: pointer;
+    transform: scale(1.09) translateY(-5px);
+}
+
+.rules-btn {
+    color: #c9c9c9;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.75rem 0;
+    border: 1.5px solid #c9c9c9;
+    border-radius: 7px;
+    font-size: 1.2rem;
+    letter-spacing: 0.2rem;
+    margin: 0.75rem auto;
+    width: 11rem;
+    display: block;
+    text-align: center;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.rules-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    pointer-events: none;
+    opacity: 0;
+    position: absolute;
+    width: 100vw;
+    z-index: 999;
+}
+
+.rules {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 2rem 3rem;
+    color: #3B4262;
+    background-color: #FFF;
+    border-radius: 10px;
+}
+
+.rules-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 4rem;
+}
+
+.rules-header-img {
+    display: flex;
+    align-items: center;
+}
+
+.rules-header-img:hover {
+    cursor: pointer;
+}
+
+#play-again-button {
+    border: none;
+    border-radius: 7px;
+    background: #FFF;
+    color: #3B4262;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+    margin-top: 225px;
+}
+
+#play-again-button:hover {
+    cursor: pointer;
+}
+
+.show {
+    pointer-events: auto;
+    opacity: 1;
+}
+
+.hide {
+    display: none;
+}
+
+.animation-rock {
+    animation-name: moveRock;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveRock {
+    100% {
+        transform: translateX(-60%) translateY(-45%)
+    }
+}
+
+.animation-paper {
+    animation-name: movePaper;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes movePaper {
+    100% {
+        transform: translateX(-32%) translateY(7.5%)
+    }
+}
+
+.animation-scissors {
+    animation-name: moveScissors;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveScissors {
+    100% {
+        transform: translateX(-89%) translateY(7.5%)
+    }
+}
+
+.machine-option {
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+
+.animation-rock-machine {
+    animation-name: moveRockMachine;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveRockMachine {
+    0% {
+        transform: translateX(40%)
+    }
+    100% {
+        transform: translateX(100%) translateY(2%)
+    }
+}
+
+.animation-paper-machine {
+    animation-name: movePaperMachine;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes movePaperMachine {
+    0% { 
+        transform: translateX(140%) translateY(70%)
+    }
+    100% {
+        transform: translateX(220%) translateY(108%)
+    }
+}
+
+.animation-scissors-machine {
+    animation-name: moveScissorsMachine;
+    animation-duration: 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes moveScissorsMachine {
+    0% { 
+        transform: translateX(20%) translateY(70%)
+    }
+    100% {
+        transform: translateX(80%) translateY(108%)
+    }
+}
